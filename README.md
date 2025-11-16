@@ -9,7 +9,6 @@ Kunjungi portfolio saya:
 ```
 https://Radit0.github.io/Portofolio/
 ```
-*(Ganti USERNAME dengan username GitHub Anda)*
 
 ---
 
