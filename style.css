@@ -1,0 +1,119 @@
+:root{
+	--bg:#0b0b0b;
+	--panel:#0f0f10;
+	--muted:#bfc3c8;
+	--white:#ffffff;
+	--neon-blue: #00aaff;
+	--neon-green:#00ff7a;
+	--glass: rgba(255,255,255,0.04);
+	--blur: 8px;
+	--container:1200px;
+	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	background:linear-gradient(180deg,#060606 0%, #0b0b0b 100%);
+	color:var(--white);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:1.45;
+}
+
+/* Container */
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+
+/* Navbar */
+.navbar{
+	position:sticky;top:0;z-index:60;
+	backdrop-filter: blur(var(--blur));
+	background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1rem}
+.logo{display:flex;align-items:center;gap:0.6rem;color:var(--white);text-decoration:none;font-weight:600}
+.logo-mark{background:var(--neon-blue);color:#010101;padding:6px 8px;border-radius:4px;font-weight:700}
+.logo-text{letter-spacing:0.06em;color:var(--muted);font-size:0.95rem}
+
+.nav-links{display:flex;gap:1rem}
+.nav-links a{color:var(--muted);text-decoration:none;padding:8px;border-radius:6px;transition:all .2s}
+.nav-links a:hover{color:var(--white);transform:translateY(-2px);text-shadow:0 0 8px rgba(0,170,255,0.08)}
+
+.nav-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:1.1rem}
+
+/* Hero */
+.section{padding:4rem 0}
+.hero-grid{display:flex;gap:2rem;align-items:center;justify-content:space-between}
+.hero-left{flex:1;max-width:720px}
+.hero-right{width:320px;display:flex;justify-content:flex-end}
+.name{font-size:2.4rem;margin:0 0 0.4rem;color:var(--white)}
+.role{font-weight:600;color:var(--muted);margin:0 0 1rem}
+.typing{color:var(--neon-blue);font-weight:700}
+.lead{color:rgba(255,255,255,0.75);max-width:60%}
+
+.hero-cta{margin-top:1.5rem;display:flex;gap:1rem}
+.btn{display:inline-block;padding:0.7rem 1rem;border-radius:10px;text-decoration:none;font-weight:600;transition:all .25s}
+.btn-primary{background:linear-gradient(90deg,var(--neon-blue),#0086d1);color:#021219;box-shadow:0 6px 18px rgba(0,170,255,0.08)}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,170,255,0.12)}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+/* Profile Card */
+.profile-card{background:var(--panel);padding:1rem;border-radius:12px;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(0,0,0,0.6);text-align:center}
+.profile-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.03);box-shadow:0 8px 24px rgba(0,0,0,0.6)}
+.profile-meta{margin-top:0.6rem}
+.profile-meta h3{margin:0;font-size:1.05rem}
+.profile-meta p{margin:0;color:var(--muted);font-size:0.9rem}
+
+/* Sections titles */
+.section-title{font-size:1.2rem;margin-bottom:1rem;color:var(--neon-blue)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.skill-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03);transition:transform .25s, box-shadow .25s}
+.skill-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,170,255,0.06)}
+.progress{height:10px;background:rgba(255,255,255,0.03);border-radius:8px;margin-top:0.6rem;overflow:hidden}
+.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--neon-blue),#2bdcff);border-radius:8px;box-shadow:0 6px 18px rgba(0,170,255,0.08);transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.service-card{padding:1.2rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);transition:transform .28s, box-shadow .28s}
+.service-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 20px 60px rgba(0,170,255,0.06)}
+.service-card h4{margin:0 0 0.6rem}
+.service-card .price{color:var(--muted);margin:0 0 0.8rem}
+.service-btn{display:inline-block;margin-top:0.6rem;padding:0.5rem 0.8rem;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--white);text-decoration:none;transition:transform .18s}
+.service-card:hover .service-btn{box-shadow:0 8px 28px rgba(0,170,255,0.06);transform:translateY(-4px)}
+
+/* Contact */
+.contact-section{padding-top:2rem;padding-bottom:4rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.contact-info{padding:1.2rem;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005))}
+.btn-wa{background:linear-gradient(90deg,var(--neon-green),#00d36a);color:#021209;padding:0.8rem 1rem;border-radius:12px;font-weight:700;display:inline-block;box-shadow:0 10px 36px rgba(0,255,122,0.06);animation:pulse 2.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,255,122,0.14)}70%{box-shadow:0 0 30px 8px rgba(0,255,122,0.04)}100%{box-shadow:0 0 0 0 rgba(0,255,122,0)}}
+
+/* Contact form */
+.contact-form{display:flex;flex-direction:column;gap:0.6rem;padding:1.2rem;border-radius:10px;background:var(--panel)}
+.contact-form label{display:flex;flex-direction:column;color:var(--muted);font-size:0.9rem}
+.contact-form input,.contact-form textarea{margin-top:0.4rem;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white)}
+.contact-form textarea{min-height:120px;resize:vertical}
+
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,0.02);padding:1.4rem 0;background:transparent;text-align:center;color:var(--muted)}
+
+/* Animations: fade-in */
+[data-anim]{opacity:0;transform:translateY(10px);transition:opacity .8s ease, transform .8s ease}
+[data-anim].in-view{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:900px){
+	.hero-grid{flex-direction:column-reverse;align-items:flex-start}
+	.hero-right{width:100%;display:flex;justify-content:flex-start}
+	.lead{max-width:100%}
+	.nav-links{display:none}
+	.nav-toggle{display:block}
+	.contact-grid{grid-template-columns:1fr}
+}
+
+/* Tiny helpers */
+.hidden{display:none}
