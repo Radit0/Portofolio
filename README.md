@@ -26,8 +26,8 @@ https://Radit0.github.io/Portofolio/
 - Progress bar interaktif untuk menampilkan keahlian
 - Section layanan:
   - Landing Page UMKM (500k – 1.5jt)
-  - Toko Online (1 – 3jt)
-  - Editing Website (200 – 500k)
+  - Toko Online (1jt – 3jt)
+  - Editing Website (200k – 500k)
   - Jasa Scripter (20k – 100k)
 - Tombol WhatsApp otomatis dengan pesan siap kirim
 - Navigasi sticky + efek glass blur
